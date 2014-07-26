@@ -50,10 +50,6 @@ $(document).ready(function() {
         var n = parseInt($('#users_number').val(), 10);
         var speed = parseInt($('#tradeoff').val(), 10);
 
-        console.log(features);
-        console.log(n);
-        console.log(speed);
-
         //Perform the request
         var req = ocpu.rpc("getUsers", {
             features_: features,
