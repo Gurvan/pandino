@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>#pandino</title>
+
+    <link rel="icon" type="image/png" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/vendor/grid.css">
+    <script src="scripts/vendor/jquery-1.11.1.min.js"></script>
+    <script src="scripts/vendor/opencpu-0.5.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+
+<body>
+    <div id="headline" class="headline">
+        <h1>
+            <span>#pandino</span>
+        </h1>
+        <h2>
+            <span>An app providing you with the highest visibility for your video in the Twitter network</span>
+        </h2>
+    </div>
+
+    <div id="application" class="application">
+        <div id="parameters" class="parameters">
+
+            <h4>Categories</h4>
+            <p>Select categories your video is about</p>
+            <div class="categories">
+
+                <select class="select" type="select">
+                    <option id="music" value="music">Music</option>
+                    <option id="entertainment" value="entertainment">Entertainment</option>
+                    <option id="gaming" value="gaming">Gaming</option>
+                    <option id="people_blogs" value="people_blogs">People/Blogs</option>
+                    <option id="education" value="education">Education</option>
+                    <option id="news_politics" value="news_politics">News/Politics</option>
+                    <option id="films_animation" value="films_animation">Films/Animation</option>
+                    <option id="sports" value="sports">Sports</option>
+                    <option id="howto" value="howto">Howto</option>
+                    <option id="comedy" value="comedy">Comedy</option>
+                    <option id="shows" value="shows">Shows</option>
+                    <option id="science_tech" value="science_tech">Science/Tech</option>
+                    <option id="nonprofit" value="nonprofit">Non Profit</option>
+                    <option id="travel" value="travel">Travel</option>
+                    <option id="animals" value="animals">Animals</option>
+                    <option id="movies" value="movies">Movies</option>
+                    <option id="movies" value="autos">Autos</option>
+                </select>
+
+                <select class="select" type="select">
+                    <option id="empty" value="empty">--Empty--</option>
+                    <option id="music" value="music">Music</option>
+                    <option id="entertainment" value="entertainment">Entertainment</option>
+                    <option id="gaming" value="gaming">Gaming</option>
+                    <option id="people_blogs" value="people_blogs">People/Blogs</option>
+                    <option id="education" value="education">Education</option>
+                    <option id="news_politics" value="news_politics">News/Politics</option>
+                    <option id="films_animation" value="films_animation">Films/Animation</option>
+                    <option id="sports" value="sports">Sports</option>
+                    <option id="howto" value="howto">Howto</option>
+                    <option id="comedy" value="comedy">Comedy</option>
+                    <option id="shows" value="shows">Shows</option>
+                    <option id="science_tech" value="science_tech">Science/Tech</option>
+                    <option id="nonprofit" value="nonprofit">Non Profit</option>
+                    <option id="travel" value="travel">Travel</option>
+                    <option id="animals" value="animals">Animals</option>
+                    <option id="movies" value="movies">Movies</option>
+                    <option id="movies" value="autos">Autos</option>
+                </select>
+
+                <select class="select" type="select">
+                    <option id="empty" value="empty">--Empty--</option>
+                    <option id="music" value="music">Music</option>
+                    <option id="entertainment" value="entertainment">Entertainment</option>
+                    <option id="gaming" value="gaming">Gaming</option>
+                    <option id="people_blogs" value="people_blogs">People/Blogs</option>
+                    <option id="education" value="education">Education</option>
+                    <option id="news_politics" value="news_politics">News/Politics</option>
+                    <option id="films_animation" value="films_animation">Films/Animation</option>
+                    <option id="sports" value="sports">Sports</option>
+                    <option id="howto" value="howto">Howto</option>
+                    <option id="comedy" value="comedy">Comedy</option>
+                    <option id="shows" value="shows">Shows</option>
+                    <option id="science_tech" value="science_tech">Science/Tech</option>
+                    <option id="nonprofit" value="nonprofit">Non Profit</option>
+                    <option id="travel" value="travel">Travel</option>
+                    <option id="animals" value="animals">Animals</option>
+                    <option id="movies" value="movies">Movies</option>
+                    <option id="movies" value="autos">Autos</option>
+                </select>
+            </div>
+
+
+            <h4>Promotional users</h4>
+            <p>Do you want to exclude users who promote mostly their own videos?</p>
+            <div class="promotional">
+                <label>
+                    <input id="prom" class="checkbox" type="checkbox" value="nprom">Exclude promotional users</label>
+            </div>
+            <h4>Geographic Macroarea</h4>
+            <p>Select macroareas you want to target</p>
+            <div class="area">
+                <span>
+                    <label>
+                        <input id="north_america" class="checkbox" type="checkbox" value="north_america" checked>North America</label>
+                </span>
+                <span>
+                    <label>
+                        <input id="other_countries" class="checkbox" type="checkbox" value="others" checked>Rest of the world</label>
+                </span>
+                <span>
+                    <label>
+                        <input id="no_country" class="checkbox" type="checkbox" value="none" checked>Not located</label>
+                </span>
+            </div>
+
+
+            <button id="advanced_button" type="button" onClick="display_advanced()">Advanced</button>
+            <div id="advanced" class="advanced">
+                <h4>Speed/Extension trade-off</h4>
+                <p>Set the trade-off in your market scope (you can leave it to default)</p>
+                <div class="tradeoff">
+                    <span>
+                        <input id="tradeoff" type="range" min="1" max="7" step="1" value="4"></input>
+                    </span>
+                </div>
+                <h4>Number of users</h4>
+                <p>How many users do you want to find ? (between 5 and 30)</p>
+                <div class="users_number">
+                    <input id="users_number" type="number" min="5" max="30" step="1" value="15">
+                </div>
+            </div>
+
+            <div class="submit">
+                <button id="submit_button" type="button">Find Users</button>
+            </div>
+        </div>
+
+
+        <div id="results" class="results">
+            <table id="summary" class="summary">
+                <h3>Summary</h3>
+                <tr id="sum_followers">
+                    <th class="desc">Total number of users reached:</th>
+                </tr>
+                <tr id="mean_followers">
+                    <th class="desc">Number of users reached per user targeted:</th>
+                </tr>
+                <tr id="num_rt">
+                    <th class="desc">Expected number of retweet:</th>
+                </tr>
+                <tr id="lag">
+                    <th class="desc">First user will share in:</th>
+                </tr>
+                <tr id="3rdQlag">
+                    <th class="desc">75% of users will share in:</th>
+                </tr>
+            </table>
+
+            <table id="results_table" class="results_table">
+                <h3>Results</h3>
+                <thead>
+                    <tr id="scores_head" class="scores_head">
+                        <th id="pic" class="pic"></th>
+                        <th id="screen_name" class="screen_name">ID</th>
+                        <th id="score" class="score">Score</th>
+                        <th id="klout" class="klout">Klout</th>
+                    </tr>
+                </thead>
+                <tbody id="scores" class="scores">
+                    <!--javascript generated table-->
+                </tbody>
+            </table>
+            <br>
+        </div>
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+    <div id="footer" class="footer">
+        <div>
+            <span>Federico Cornalba</span>
+            <span>Chiara Ghiringhelli</span>
+            <span>Riccardo Lorenzon</span>
+            <span>Anna Maria Pozzebon</span>
+            <span>Gurvan Priem</span>
+        </div>
+        <p>2014</p>
+    </div>
+
+</body>
+
+</html>

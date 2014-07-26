@@ -1,0 +1,11 @@
+Package: pandino
+Type: Package
+Title: Simple webapp which rank Twitter users based on their interests
+Version: 1.0
+Date: 2014-07-26
+Author: Gurvan PRIEM
+Maintainer:Gurvan PRIEM <gurvanpriem@gmail.com>
+Description: Webapp using opencpu which rank Twitter users based on a selection of interests' categories and social parameters
+Depends: RCurl, opencpu
+License: WTFPL
+LazyData: true
