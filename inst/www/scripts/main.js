@@ -19,20 +19,10 @@ ocpu.seturl("../R");
 
 $(document).ready(function() {
     var pattern = new RegExp("account");
-    var features_categories = $('select.select').map(function() {
-        return this.value;
-    }).get();
-    var features_prom_area = $('input:checked.checkbox').map(function() {
-        return this.value;
-    }).get();
-    var features = features_categories.concat(features_prom_area);
-    var n = parseInt($('#users_number').val(), 10);
-    var speed = parseInt($('#tradeoff').val(), 10);
 
     $("#submit_button").on("click", function() {
         //disable the button to prevent multiple clicks
         $("#submit_button").attr("disabled", "disabled");
-
 
         //Refresh Summary and Results
         $('#scores').empty();
@@ -49,6 +39,21 @@ $(document).ready(function() {
         $(document.body).animate({
             'scrollTop': $('#results').offset().top
         }, 500);
+
+        var features_categories = $('select.select').map(function() {
+            return this.value;
+        }).get();
+        var features_prom_area = $('input:checkbox:checked.checkbox').map(function() {
+            return this.value;
+        }).get();
+        var features = features_categories.concat(features_prom_area);
+        var n = parseInt($('#users_number').val(), 10);
+        var speed = parseInt($('#tradeoff').val(), 10);
+
+        console.log(features);
+        console.log(n);
+        console.log(speed);
+
         //Perform the request
         var req = ocpu.rpc("getUsers", {
             features_: features,
