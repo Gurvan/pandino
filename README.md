@@ -5,7 +5,7 @@ Pandino is the result of an univesity project in statistics.
 It is an **R** package aiming at ranking Twitter users from a local dataset based on their interests and their social characteristics. It is provided with a web interface and uses [openCPU](https://github.com/jeroenooms/opencpu) as an R backend.
 
 ##Getting started
-First clone the repository or download and unzip the archive.
+First clone the [repository](https://github.com/Gurvan/pandino.git) or download and unzip the [archive](https://github.com/Gurvan/pandino/archive/master.zip).
 In the file `getStarted.R` replace the line
 
 ```R
